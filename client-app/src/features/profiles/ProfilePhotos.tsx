@@ -36,8 +36,8 @@ export default observer(function ProfilePhotos({ profile }: Props) {
                 <Grid.Column width='16'>
                     <Header floated='left' icon='image' content='Photos' />
                     {isCurrentUser && (
-                        <Button floated='right' basic content={addPhotoMode ? 'Cancel' : 'Add' +
-                            ' Photo'} onClick={() => setAddPhotoMode(!addPhotoMode)} />
+                        <Button floated='right' basic content={addPhotoMode ? 'Ακύρωση' : 'Προσθήκη φωτογραφίας'}
+                            onClick={() => setAddPhotoMode(!addPhotoMode)} />
                     )}
                 </Grid.Column>
                 <Grid.Column width='16'>

@@ -43,7 +43,7 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                                 />
                                 <p>{format(activity.date!, 'dd MMM yyyy')}</p>
                                 <p>
-                                    Hosted by <strong><Link to={`/profiles/${activity.hostUsername}`}>{activity.hostUsername}</Link></strong>
+                                Δημιουργήθηκε από <strong><Link to={`/profiles/${activity.hostUsername}`}>{activity.hostUsername}</Link></strong>
                                 </p>
                             </Item.Content>
                         </Item>
@@ -73,11 +73,11 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                     </>
 
                 ) : activity.isGoing ? (
-                    <Button onClick={updateAttendeance} 
-                        loading={loading}>Cancel attendance</Button>
+                    <Button onClick={updateAttendeance}
+                        loading={loading}>Ακύρωση συμμετοχής</Button>
                 ) : (
-                    <Button disabled={activity.isCancelled} onClick={updateAttendeance} 
-                        loading={loading} color='teal'>Join Activity</Button>
+                    <Button disabled={activity.isCancelled} onClick={updateAttendeance}
+                        loading={loading} color='teal'>Συμμετοχή στη δραστηριότητα</Button>
                 )}
             </Segment>
         </Segment.Group>

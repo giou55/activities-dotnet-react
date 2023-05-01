@@ -10,19 +10,19 @@ export default observer(function NavBar() {
             <Container>
                 <Menu.Item as={NavLink} to='/' header>
                     <img src='/assets/logo.png' alt='logo' style={{marginRight: 10}}/>
-                    Reactivities
+                    CONNECTING PEOPLE
                 </Menu.Item>
-                <Menu.Item as={NavLink} to='/activities' name='Activities' />
+                <Menu.Item as={NavLink} to='/activities' name='Δραστηριότητες' />
                 <Menu.Item as={NavLink} to='/errors' name='Errors' />
                 <Menu.Item>
-                    <Button as={NavLink} to='/createActivity' positive content='Create Activity' />
+                    <Button as={NavLink} to='/createActivity' positive content='Νέα Δραστηριότητα' />
                 </Menu.Item>
                 <Menu.Item position='right'>
                     <Image avatar spaced='right' src={user?.image || '/assets/user.png'} />
                     <Dropdown pointing='top left' text={user?.displayName}>
                         <Dropdown.Menu>
-                            <Dropdown.Item as={Link} to={`/profiles/${user?.username}`} text='My Profile' icon='user' />
-                            <Dropdown.Item onClick={logout} text='Logout' icon='power' />
+                            <Dropdown.Item as={Link} to={`/profiles/${user?.username}`} text='Το Προφίλ μου' icon='user' />
+                            <Dropdown.Item onClick={logout} text='Αποσύνδεση' icon='power' />
                         </Dropdown.Menu>
                     </Dropdown>
                 </Menu.Item>

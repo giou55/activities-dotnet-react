@@ -51,7 +51,7 @@ export default observer(function ActivityForm() {
 
     return (
         <Segment clearing>
-            <Header content='Activity Details' sub color='teal' />
+            <Header content='ΛΕΠΤΟΜΕΡΕΙΕΣ ΔΡΑΣΤΗΡΙΟΤΗΤΑΣ' sub color='teal' />
             <Formik
                 enableReinitialize
                 validationSchema={validationSchema}
@@ -59,22 +59,22 @@ export default observer(function ActivityForm() {
                 onSubmit={values =>  handleFormSubmit(values)}>
                 {({ handleSubmit, isValid, isSubmitting, dirty }) => (
                     <Form className='ui form' onSubmit={handleSubmit} autoComplete='off'>
-                        <MyTextInput name='title' placeholder='Title' />
-                        <MyTextArea rows={3} name='description' placeholder='Description' />
-                        <MySelectInput options={categoryOptions} name='category' placeholder='Category' />
-                        <MyDateInput name='date' placeholderText='Date' showTimeSelect timeCaption='time' dateFormat='MMMM d, yyyy h:mm aa' />
+                        <MyTextInput name='title' placeholder='Τίτλος' />
+                        <MyTextArea rows={3} name='description' placeholder='Περιγραφή' />
+                        <MySelectInput options={categoryOptions} name='category' placeholder='Κατηγορία' />
+                        <MyDateInput name='date' placeholderText='Ημερομηνία' showTimeSelect timeCaption='time' dateFormat='MMMM d, yyyy h:mm aa' />
 
-                        <Header content='Location Details' sub color='teal' />
-                        <MyTextInput name='venue' placeholder='Venue' />
-                        <MyTextInput name='city' placeholder='city' />
-                        <Button 
+                        <Header content='ΛΕΠΤΟΜΕΡΕΙΕΣ ΤΟΠΟΘΕΣΙΑΣ' sub color='teal' />
+                        <MyTextInput name='venue' placeholder='Χώρος εκδήλωσης' />
+                        <MyTextInput name='city' placeholder='Πόλη' />
+                        <Button
                             disabled={isSubmitting || !dirty || !isValid}
-                            loading={isSubmitting} 
-                            floated='right' 
-                            positive 
-                            type='submit' 
-                            content='Submit' />
-                        <Button as={Link} to='/activities' floated='right' type='button' content='Cancel' />
+                            loading={isSubmitting}
+                            floated='right'
+                            positive
+                            type='submit'
+                            content='Υποβολή' />
+                        <Button as={Link} to='/activities' floated='right' type='button' content='Ακύρωση' />
                     </Form>
                 )}
             </Formik>

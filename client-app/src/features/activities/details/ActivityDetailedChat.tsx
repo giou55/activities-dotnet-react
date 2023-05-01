@@ -32,7 +32,7 @@ export default observer(function ActivityDetailedChat({ activityId }: Props) {
                 color='teal'
                 style={{ border: 'none' }}
             >
-                <Header>Chat about this event</Header>
+                <Header>Συνομιλήστε για το event</Header>
             </Segment>
             <Segment attached clearing>
                 <Formik

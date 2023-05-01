@@ -16,24 +16,24 @@ export default function ActivityListItem({ activity }: Props) {
                     <Label attached='top' color='red' content='Cancelled' style={{ textAlign: 'center' }} />}
                 <Item.Group>
                     <Item>
-                        <Item.Image style={{marginBottom: 5}} size='tiny' circular 
+                        <Item.Image style={{marginBottom: 5}} size='tiny' circular
                             src={activity.host?.image || '/assets/user.png'} />
                         <Item.Content>
                             <Item.Header as={Link} to={`/activities/${activity.id}`}>
                                 {activity.title}
                             </Item.Header>
-                            <Item.Description>Hosted by <Link to={`/profiles/${activity.hostUsername}`}>{activity.host?.displayName}</Link></Item.Description>
+                            <Item.Description>Δημιουργήθηκε από <Link to={`/profiles/${activity.hostUsername}`}>{activity.host?.displayName}</Link></Item.Description>
                             {activity.isHost && (
                                 <Item.Description>
                                     <Label basic color='orange'>
-                                        You are hosting this activity!
+                                        Διοργανώνετε αυτήν την δραστηριότητα!
                                     </Label>
                                 </Item.Description>
                             )}
                             {activity.isGoing && !activity.isHost && (
                                 <Item.Description>
                                     <Label basic color='green'>
-                                        You are going to this activity!
+                                        Θα πάτε σε αυτήν την δραστηριότητα!
                                     </Label>
                                 </Item.Description>
                             )}
@@ -57,7 +57,7 @@ export default function ActivityListItem({ activity }: Props) {
                     to={`/activities/${activity.id}`}
                     color='teal'
                     floated='right'
-                    content='View'
+                    content='Προβολή'
                 />
             </Segment>
         </Segment.Group>

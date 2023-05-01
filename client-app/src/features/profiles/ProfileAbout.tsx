@@ -16,12 +16,12 @@ export default observer(function ProfileAbout() {
                     <Header
                         floated='left'
                         icon='user'
-                        content={`About ${profile?.displayName}`} />
+                        content={profile?.displayName} />
                         {isCurrentUser && (
                         <Button
                             floated='right'
                             basic
-                            content={editMode ? 'Cancel' : 'Edit Profile'}
+                            content={editMode ? 'Ακύρωση' : 'Επεξεργασία προφίλ'}
                             onClick={() => setEditMode(!editMode)}
                         />)}
                 </Grid.Column>

@@ -14,9 +14,9 @@ export default observer(function ProfileFollowings() {
                     <Header
                         floated='left'
                         icon='user'
-                        content={activeTab === 3 
-                            ? `People following ${profile!.displayName}` 
-                            : `People ${profile?.displayName} is following`}
+                        content={activeTab === 3
+                            ? `'Ατομα που ακολουθούν τον χρήστη ${profile!.displayName}`
+                            : `Άτομα που ακολουθεί ο χρήστης ${profile?.displayName}`}
                     />
                 </Grid.Column>
                 <Grid.Column width='16'>

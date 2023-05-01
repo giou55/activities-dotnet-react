@@ -9,19 +9,19 @@ export default observer(function ActivityFilters() {
     return (
         <>
             <Menu vertical size='large' style={{ width: '100%', marginTop: 25 }}>
-                <Header icon='filter' attached color='teal' content='Filters' />
+                <Header icon='filter' attached color='teal' content='Φίλτρα' />
                 <Menu.Item
-                    content='All Activites'
+                    content='Όλες οι δραστηριότητες'
                     active={predicate.has('all')}
                     onClick={() => setPredicate('all', 'true')}
                 />
                 <Menu.Item
-                    content="I'm going"
+                    content="Θα πάω"
                     active={predicate.has('isGoing')}
                     onClick={() => setPredicate('isGoing', 'true')}
                 />
                 <Menu.Item
-                    content="I'm hosting"
+                    content="Είμαι διοργανωτής"
                     active={predicate.has('isHost')}
                     onClick={() => setPredicate('isHost', 'true')}
                 />
