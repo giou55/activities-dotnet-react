@@ -10,7 +10,7 @@ export default function NotFound() {
             </Header>
             <Segment.Inline>
                 <Button as={Link} to='/activities'>
-                    Return to activities page
+                    Επιστροφή στις Δραστηριότητες
                 </Button>
             </Segment.Inline>
         </Segment>

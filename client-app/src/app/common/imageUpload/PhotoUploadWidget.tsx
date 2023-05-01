@@ -48,7 +48,7 @@ export default observer(function PhotoUploadWidget({ loading, uploadPhoto }: Pro
                     {files && files.length > 0 && (
                         <>
                             <Button.Group widths={2}>
-                                <Button loading={loading} onClick={onCrop} positive icon='check' />
+                                <Button loading={loading} onClick={onCrop} color='teal' icon='check' />
                                 <Button disabled={loading} onClick={() => setFiles([])} icon='close' />
                             </Button.Group>
                         </>

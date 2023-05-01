@@ -71,7 +71,7 @@ export default observer(function ActivityForm() {
                             disabled={isSubmitting || !dirty || !isValid}
                             loading={isSubmitting}
                             floated='right'
-                            positive
+                            color='teal'
                             type='submit'
                             content='Υποβολή' />
                         <Button as={Link} to='/activities' floated='right' type='button' content='Ακύρωση' />

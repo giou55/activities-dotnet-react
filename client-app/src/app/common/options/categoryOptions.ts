@@ -1,9 +1,10 @@
 export const categoryOptions = [
-    {text: 'Drinks', value: 'drinks'},
-    {text: 'Film', value: 'film'},
-    {text: 'Food', value: 'food'},
-    {text: 'Hiking', value: 'hiking'},
-    {text: 'Music', value: 'music'},
-    {text: 'Seminar', value: 'seminar'},
-    {text: 'Travel', value: 'travel'},
+    {text: 'Ποτό', value: 'drinks'},
+    {text: 'Έκθεση', value: 'excibition'},
+    {text: 'Κινηματογράφος', value: 'film'},
+    {text: 'Φαγητό', value: 'food'},
+    {text: 'Πεζοπορία', value: 'hiking'},
+    {text: 'Μουσική', value: 'music'},
+    {text: 'Σεμινάριο', value: 'seminar'},
+    {text: 'Ταξίδι', value: 'travel'},
 ]

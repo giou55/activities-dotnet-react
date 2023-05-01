@@ -6,7 +6,7 @@ import { useStore } from "../../app/stores/store";
 import * as Yup from 'yup';
 import ValidationError from "../errors/ValidationError";
 
-export default observer(function RegsiterForm() {
+export default observer(function RegisterForm() {
     const { userStore } = useStore();
     return (
         <Formik
@@ -27,13 +27,14 @@ export default observer(function RegsiterForm() {
                     <MyTextInput placeholder="Username" name='username' />
                     <MyTextInput placeholder="Email" name='email' />
                     <MyTextInput placeholder="Password" name='password' type='password' />
-                    <ErrorMessage name='error' render={() => 
+                    <ErrorMessage name='error' render={() =>
                         <ValidationError errors={errors.error} />} />
                     <Button
-                        disabled={!isValid || !dirty || isSubmitting} 
-                        loading={isSubmitting} 
-                        positive content='Register' 
-                        type="submit" fluid 
+                        disabled={!isValid || !dirty || isSubmitting}
+                        loading={isSubmitting}
+                        color='teal'
+                        content='Register'
+                        type="submit" fluid
                     />
                 </Form>
             )}

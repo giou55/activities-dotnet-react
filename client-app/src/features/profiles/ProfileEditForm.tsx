@@ -34,7 +34,7 @@ export default observer(function ProfileEditForm({ setEditMode }: Props) {
                     />
                     <MyTextArea rows={3} placeholder='Πληροφορίες για μένα...' name='bio' />
                     <Button
-                        positive
+                        color='teal'
                         type='submit'
                         loading={isSubmitting}
                         content='Ενημέρωση προφίλ'
