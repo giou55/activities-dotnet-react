@@ -7,16 +7,18 @@ import { Activity } from "../../../app/models/activity";
 import { useStore } from '../../../app/stores/store';
 
 const activityImageStyle = {
-    filter: 'brightness(30%)'
+    filter: 'brightness(99%)'
 };
 
 const activityImageTextStyle = {
     position: 'absolute',
     bottom: '5%',
-    left: '5%',
+    // left: '5%',
+    // right: '5%',
     width: '100%',
     height: 'auto',
-    color: 'white'
+    color: 'white',
+    background: 'rgb(0,0,0,0.5)'
 };
 
 interface Props {
@@ -43,7 +45,10 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                                 />
                                 <p>{format(activity.date!, 'dd MMM yyyy')}</p>
                                 <p>
-                                Δημιουργήθηκε από <strong><Link to={`/profiles/${activity.hostUsername}`}>{activity.hostUsername}</Link></strong>
+                                Δημιουργήθηκε από
+                                    <strong>
+                                        <Link style={{ color: 'orange' }} to={`/profiles/${activity.hostUsername}`}> {activity.hostUsername}</Link>
+                                    </strong>
                                 </p>
                             </Item.Content>
                         </Item>

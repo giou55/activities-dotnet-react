@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Item, Button, Icon, Segment, Label } from "semantic-ui-react";
 import { Activity } from "../../../app/models/activity";
 import ActivityListItemAttendee from "./ActivityListItemAttendee";
+import parse from 'html-react-parser';
 
 interface Props {
     activity: Activity
@@ -51,7 +52,7 @@ export default function ActivityListItem({ activity }: Props) {
                 <ActivityListItemAttendee attendees={activity.attendees!} />
             </Segment>
             <Segment clearing>
-                <span>{activity.description}</span>
+                <p>{parse(activity.description)}</p>
                 <Button
                     as={Link}
                     to={`/activities/${activity.id}`}

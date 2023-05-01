@@ -3,6 +3,7 @@ import { observer } from 'mobx-react-lite';
 import React from 'react'
 import { Segment, Grid, Icon } from 'semantic-ui-react'
 import { Activity } from "../../../app/models/activity";
+import parse from 'html-react-parser';
 
 interface Props {
     activity: Activity
@@ -17,7 +18,7 @@ export default observer(function ActivityDetailedInfo({ activity }: Props) {
                         <Icon size='large' color='teal' name='info' />
                     </Grid.Column>
                     <Grid.Column width={15}>
-                        <p>{activity.description}</p>
+                        <p>{parse(activity.description)}</p>
                     </Grid.Column>
                 </Grid>
             </Segment>
