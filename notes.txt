@@ -1,0 +1,16 @@
+Name: george
+Username: giourme
+Email: george@ggg.com
+Password: 123456#Abc
+---------------------------------------------------------------------------
+The default username for postgres is postgres.
+---------------------------------------------------------------------------
+Αν θέλουμε να δούμε locally την εφαρμογή μας με Postgres container σε development mode,
+τρέχουμε στον υπολογιστή μας το Docker Desktop,
+μετά γράφουμε
+docker run --name postgres -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=secret -p 5432:5432 -d postgres:latest
+μετά πάμε στον φάκελο API και γράφουμε
+dotnet run
+μετά πάμε στον φάκελο client-app και γράφουμε
+npm run start
+---------------------------------------------------------------------------

@@ -7,7 +7,7 @@ interface Props {
 export default function ValidationError({errors}: Props) {
     return (
         <Message error>
-            {errors && (
+            {errors && Array.isArray(errors) && (
                 <Message.List>
                     {errors.map((err: string, i: any) => (
                         <Message.Item key={i}>{err}</Message.Item>
