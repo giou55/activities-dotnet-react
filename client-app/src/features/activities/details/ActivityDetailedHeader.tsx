@@ -62,7 +62,7 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                             color={activity.isCancelled ? 'green' : 'red'}
                             floated='left'
                             basic
-                            content={activity.isCancelled ? 'Re-activate activity' : 'Cancel Activity'}
+                            content={activity.isCancelled ? 'Επανεργοποίηση δραστηριότητας' : 'Διαγραφή δραστηριότητας'}
                             onClick={cancelActivityToggle}
                             loading={loading}
                         />
@@ -73,7 +73,7 @@ export default observer(function ActivityDetailedHeader({ activity }: Props) {
                             floated='right'
                             disabled={activity.isCancelled}
                         >
-                            Manage Event
+                            Επεξεργασία δραστηριότητας
                         </Button>
                     </>
 

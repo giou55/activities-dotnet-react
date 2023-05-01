@@ -60,7 +60,7 @@ export default observer(function ActivityForm() {
                 {({ handleSubmit, isValid, isSubmitting, dirty }) => (
                     <Form className='ui form' onSubmit={handleSubmit} autoComplete='off'>
                         <MyTextInput name='title' placeholder='Τίτλος' />
-                        <MyTextArea rows={3} name='description' placeholder='Περιγραφή' />
+                        <MyTextArea rows={12} name='description' placeholder='Περιγραφή' />
                         <MySelectInput options={categoryOptions} name='category' placeholder='Κατηγορία' />
                         <MyDateInput name='date' placeholderText='Ημερομηνία' showTimeSelect timeCaption='time' dateFormat='MMMM d, yyyy h:mm aa' />
 
