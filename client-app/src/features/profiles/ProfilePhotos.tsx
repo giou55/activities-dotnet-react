@@ -34,7 +34,7 @@ export default observer(function ProfilePhotos({ profile }: Props) {
         <Tab.Pane>
             <Grid>
                 <Grid.Column width='16'>
-                    <Header floated='left' icon='image' content='Photos' />
+                    <Header floated='left' icon='image' content='Φωτογραφίες' />
                     {isCurrentUser && (
                         <Button floated='right' basic content={addPhotoMode ? 'Ακύρωση' : 'Προσθήκη φωτογραφίας'}
                             onClick={() => setAddPhotoMode(!addPhotoMode)} />

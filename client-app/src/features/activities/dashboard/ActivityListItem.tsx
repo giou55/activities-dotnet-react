@@ -52,7 +52,7 @@ export default function ActivityListItem({ activity }: Props) {
                 <ActivityListItemAttendee attendees={activity.attendees!} />
             </Segment>
             <Segment clearing>
-                <p>{parse(activity.description)}</p>
+                <p>{parse(activity.description.substring(0, 300))} . . .</p>
                 <Button
                     as={Link}
                     to={`/activities/${activity.id}`}

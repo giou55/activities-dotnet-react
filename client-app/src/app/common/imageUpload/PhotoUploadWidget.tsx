@@ -30,12 +30,12 @@ export default observer(function PhotoUploadWidget({ loading, uploadPhoto }: Pro
             <Grid>
                 <Grid.Row />
                 <Grid.Column width={4}>
-                    <Header color='teal' sub content='Step 1 - Add Photo' />
+                    <Header color='teal' sub content='1 - ΠΡΟΣΘΗΚΗ ΦΩΤΟΓΡΑΦΙΑΣ' />
                     <PhotoUploadWidgetDropzone setFiles={setFiles} />
                 </Grid.Column>
                 <Grid.Column width={1} />
                 <Grid.Column width={4}>
-                    <Header sub color='teal' content='Step 2 - Resize image' />
+                    <Header sub color='teal' content='2 - ΠΡΟΣΑΡΜΟΓΗ' />
                     {files && files.length > 0 &&
                         <PhotoWidgetCropper setCropper={setCropper} imagePreview={files[0].preview} />
                     }
@@ -43,7 +43,7 @@ export default observer(function PhotoUploadWidget({ loading, uploadPhoto }: Pro
                 </Grid.Column>
                 <Grid.Column width={1} />
                 <Grid.Column width={4}>
-                    <Header sub color='teal' content='Step 3 - Preview & Upload' />
+                    <Header sub color='teal' content='3 - ΕΠΙΣΚΟΠΗΣΗ & ΑΝΕΒΑΣΜΑ' />
                     <div className="img-preview" style={{ minHeight: 200, overflow: 'hidden' }} />
                     {files && files.length > 0 && (
                         <>

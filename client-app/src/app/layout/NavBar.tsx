@@ -13,7 +13,7 @@ export default observer(function NavBar() {
                     CONNECTING PEOPLE
                 </Menu.Item>
                 <Menu.Item as={NavLink} to='/activities' name='Δραστηριότητες' />
-                <Menu.Item as={NavLink} to='/errors' name='Errors' />
+                {/* <Menu.Item as={NavLink} to='/errors' name='Errors' /> */}
                 <Menu.Item>
                     <Button as={NavLink} to='/createActivity' color='teal' content='Νέα Δραστηριότητα' />
                 </Menu.Item>
