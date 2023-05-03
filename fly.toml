@@ -1,20 +1,23 @@
-# fly.toml file generated for reactivities-course on 2022-12-04T14:03:10+07:00
+# fly.toml app configuration file generated for connectingpeople on 2023-05-03T16:11:48+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
-app = "reactivities-course"
+app = "connectingpeople"
 kill_signal = "SIGINT"
 kill_timeout = 5
+primary_region = "ams"
 processes = []
 
 [build]
-  image = "trycatchlearn/reactivities:latest"
+  image = "giourme/connectingpeople:latest"
 
 [env]
   ASPNETCORE_URLS="http://+:8080"
-  Cloudinary__CloudName="dj3wmuy3l"
-  Cloudinary__ApiKey="895484589483755"
+  Cloudinary__CloudName="dzikvg6da"
+  Cloudinary__ApiKey="859196814844654"
 
 [experimental]
-  allowed_public_ports = []
   auto_rollback = true
 
 [[services]]
