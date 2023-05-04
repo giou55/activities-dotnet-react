@@ -44,8 +44,8 @@ export default function ActivityListItem({ activity }: Props) {
             </Segment>
             <Segment>
                 <span>
-                    <Icon name='clock' /> {format(activity.date!, 'dd MMM yyyy h:mm aa')}
-                    <Icon name='marker' /> {activity.venue}
+                    <Icon name='clock' />{format(activity.date!, 'dd MMM yyyy h:mm aa')}
+                    <Icon name='marker' style={{marginLeft: 10}} />{activity.venue}
                 </span>
             </Segment>
             <Segment secondary>

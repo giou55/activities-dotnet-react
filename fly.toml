@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for connectingpeople on 2023-05-03T16:11:48+03:00
+# fly.toml app configuration file generated for connectingpeople on 2023-05-04T12:19:13+03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -13,9 +13,9 @@ processes = []
   image = "giourme/connectingpeople:latest"
 
 [env]
-  ASPNETCORE_URLS="http://+:8080"
-  Cloudinary__CloudName="dzikvg6da"
-  Cloudinary__ApiKey="859196814844654"
+  ASPNETCORE_URLS = "http://+:8080"
+  Cloudinary__ApiKey = "859196814844654"
+  Cloudinary__CloudName = "dzikvg6da"
 
 [experimental]
   auto_rollback = true
