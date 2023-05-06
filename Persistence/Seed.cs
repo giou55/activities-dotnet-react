@@ -5,7 +5,8 @@ namespace Persistence
 {
     public class Seed
     {
-        public static async Task SeedData(DataContext context,
+        public static async Task SeedData(
+            DataContext context,
             UserManager<AppUser> userManager)
         {
             if (!userManager.Users.Any() && !context.Activities.Any())
