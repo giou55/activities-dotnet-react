@@ -1,10 +1,7 @@
-Name: george
-Username: giourme
-Email: george@ggg.com
-Password: 123456#Abc
----------------------------------------------------------------------------
 The default username for postgres is postgres.
+
 ---------------------------------------------------------------------------
+
 Αν θέλουμε να δούμε locally την εφαρμογή μας με Postgres container σε development mode,
 τρέχουμε στον υπολογιστή μας το Docker Desktop,
 μετά γράφουμε
@@ -13,4 +10,45 @@ docker run --name postgres -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=secret -p
 dotnet run
 μετά πάμε στον φάκελο client-app και γράφουμε
 npm run start
+
 ---------------------------------------------------------------------------
+
+Για την δημιουργία του project γράφουμε:
+
+mkdir Αctivities
+cd Αctivities
+
+dotnet new sln
+dotnet new webapi -n API
+dotnet new classlib -n Application
+dotnet new classlib -n Domain
+dotnet new classlib -n Persistence
+
+dotnet sln add API/API.csproj
+dotnet sln add Application/Application.csproj
+dotnet sln add Domain/Domain.csproj
+dotnet sln add Persistence/Persistence.csproj
+
+cd API
+dotnet add reference ../Application/Application.csproj
+cd ../Application
+dotnet add reference ../Domain/Domain.csproj
+dotnet add reference ../Persistence/Persistence.csproj
+cd ../Persistence
+dotnet add reference ../Domain/Domain.csproj
+cd ..
+
+dotnet restore
+
+-----------------------------------------------------------------------------------
+
+Οι παραπάνω εντολές μπορούν να μπουν σε ένα αρχείο create-projects.ps1
+και να τις τρέξουμε όλες μαζί γράφοντας:
+.\create-projects.ps1
+
+Εκτός και αν έχουμε προβλήματα με permissioms
+
+Αν γράψουμε Get-ExecutionPolicy και μας δείξει Restricted,
+έχουμε προβλήματα με permissions.
+
+---------------------------------------------------------------------------------

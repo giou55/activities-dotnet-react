@@ -11,12 +11,12 @@ using Persistence;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-builder.Services.AddControllers(opt => 
+builder.Services.AddControllers(opt =>
 {
     var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
     opt.Filters.Add(new AuthorizeFilter(policy));
 });
+
 builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddIdentityServices(builder.Configuration);
 
@@ -44,14 +44,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-else 
+else
 {
-    app.Use(async (context, next) => 
+    app.Use(async (context, next) =>
     {
         context.Response.Headers.Add("Strict-Transport-Security", "max-age=31536000");
         await next.Invoke();
     });
 }
+
+// app.UseHttpsRedirection();
 
 app.UseCors("CorsPolicy");
 
