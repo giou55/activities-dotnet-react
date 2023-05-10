@@ -57,7 +57,10 @@ Controllers
 
 [ApiController]
 [Route("api/[controller]")]  // localhost:5000/api/account
+[Route("errors/{code}")]
 [AllowAnonymous]
+[ServiceFilter(typeof(LogUserActivity))]  // we specify the action filter that we want to use
+[ApiExplorerSettings(IgnoreApi = true)]
 
 public class AccountController : ControllerBase
 {
