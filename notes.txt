@@ -52,3 +52,39 @@ dotnet restore
 έχουμε προβλήματα με permissions.
 
 ---------------------------------------------------------------------------------
+
+Controllers
+
+[ApiController]
+[Route("api/[controller]")]  // localhost:5000/api/account
+[AllowAnonymous]
+
+public class AccountController : ControllerBase
+{
+    [AllowAnonymous]
+    [Authorize]
+    [Authorize(Policy = "IsActivityHost")]
+    [HttpPost("login")]
+    [HttpGet]
+    [HttpGet("{id}")]
+    [HttpGet(Name = "GetWeatherForecast")]
+    [HttpDelete("{id}")]
+    [HttpPut]
+
+    public async Task<...> Login(...)
+    {
+
+    }
+}
+
+[AllowAnonymous]
+public class FallbackController : Controller
+{
+    public IActionResult Index()
+        {
+            return PhysicalFile(Path.Combine(Directory.GetCurrentDirectory(),
+                "wwwroot", "index.html"), "text/HTML");
+        }
+}
+
+-----------------------------------------------------------------------------------------
